@@ -12157,6 +12157,1636 @@
       ]
     },
     {
+      "id": "kubernetesServicePort",
+      "type": "schema",
+      "links": {
+        "self": "http://localhost:8080/v1/schemas/kubernetesserviceport",
+        "collection": "http://localhost:8080/v1/kubernetesserviceports"
+      },
+      "actions": {},
+      "pluralName": "kubernetesServicePorts",
+      "resourceFields": {
+        "port": {
+          "type": "int",
+          "description": null,
+          "create": true,
+          "update": false,
+          "readOnCreateOnly": false
+        },
+        "targetPort": {
+          "type": "int",
+          "description": null,
+          "create": true,
+          "update": false,
+          "readOnCreateOnly": false
+        },
+        "nodePort": {
+          "type": "int",
+          "description": null,
+          "create": true,
+          "update": false,
+          "readOnCreateOnly": false
+        },
+        "protocol": {
+          "type": "string",
+          "description": null,
+          "create": true,
+          "update": false,
+          "readOnCreateOnly": false
+        },
+        "name": {
+          "type": "string",
+          "description": null,
+          "create": true,
+          "update": false,
+          "readOnCreateOnly": false
+        }
+      },
+      "collectionFilters": {},
+      "includeableLinks": [],
+      "resourceActions": {},
+      "collectionActions": {},
+      "collectionFields": {},
+      "resourceMethods": [
+        "GET"
+      ],
+      "collectionMethods": [
+        "GET",
+        "POST"
+      ]
+    },
+    {
+      "id": "kubernetesLaunchConfig",
+      "type": "schema",
+      "links": {
+        "self": "http://localhost:8080/v1/schemas/kuberneteslaunchconfig"
+      },
+      "actions": {},
+      "pluralName": "kubernetesLaunchConfigs",
+      "resourceFields": {
+        "accountId": {
+          "type": "reference[account]",
+          "description": null,
+          "create": false,
+          "update": false,
+          "nullable": true,
+          "readOnCreateOnly": false,
+          "maxLength": 255
+        },
+        "agentId": {
+          "type": "reference[agent]",
+          "description": null,
+          "create": false,
+          "update": false,
+          "nullable": true,
+          "readOnCreateOnly": false,
+          "maxLength": 255
+        },
+        "allocationState": {
+          "type": "string",
+          "description": null,
+          "create": false,
+          "update": false,
+          "nullable": true,
+          "readOnCreateOnly": false,
+          "maxLength": 255
+        },
+        "build": {
+          "type": "dockerBuild",
+          "description": null,
+          "create": true,
+          "update": false,
+          "nullable": true,
+          "readOnCreateOnly": false
+        },
+        "capAdd": {
+          "type": "array[enum]",
+          "description": null,
+          "create": true,
+          "update": false,
+          "nullable": true,
+          "readOnCreateOnly": false,
+          "options": [
+            "ALL",
+            "AUDIT_CONTROL",
+            "AUDIT_WRITE",
+            "BLOCK_SUSPEND",
+            "CHOWN",
+            "DAC_OVERRIDE",
+            "DAC_READ_SEARCH",
+            "FOWNER",
+            "FSETID",
+            "IPC_LOCK",
+            "IPC_OWNER",
+            "KILL",
+            "LEASE",
+            "LINUX_IMMUTABLE",
+            "MAC_ADMIN",
+            "MAC_OVERRIDE",
+            "MKNOD",
+            "NET_ADMIN",
+            "NET_BIND_SERVICE",
+            "NET_BROADCAST",
+            "NET_RAW",
+            "SETFCAP",
+            "SETGID",
+            "SETPCAP",
+            "SETUID",
+            "SYSLOG",
+            "SYS_ADMIN",
+            "SYS_BOOT",
+            "SYS_CHROOT",
+            "SYS_MODULE",
+            "SYS_NICE",
+            "SYS_PACCT",
+            "SYS_PTRACE",
+            "SYS_RAWIO",
+            "SYS_RESOURCE",
+            "SYS_TIME",
+            "SYS_TTY_CONFIG",
+            "WAKE_ALARM"
+          ]
+        },
+        "capDrop": {
+          "type": "array[enum]",
+          "description": null,
+          "create": true,
+          "update": false,
+          "nullable": true,
+          "readOnCreateOnly": false,
+          "options": [
+            "ALL",
+            "AUDIT_CONTROL",
+            "AUDIT_WRITE",
+            "BLOCK_SUSPEND",
+            "CHOWN",
+            "DAC_OVERRIDE",
+            "DAC_READ_SEARCH",
+            "FOWNER",
+            "FSETID",
+            "IPC_LOCK",
+            "IPC_OWNER",
+            "KILL",
+            "LEASE",
+            "LINUX_IMMUTABLE",
+            "MAC_ADMIN",
+            "MAC_OVERRIDE",
+            "MKNOD",
+            "NET_ADMIN",
+            "NET_BIND_SERVICE",
+            "NET_BROADCAST",
+            "NET_RAW",
+            "SETFCAP",
+            "SETGID",
+            "SETPCAP",
+            "SETUID",
+            "SYSLOG",
+            "SYS_ADMIN",
+            "SYS_BOOT",
+            "SYS_CHROOT",
+            "SYS_MODULE",
+            "SYS_NICE",
+            "SYS_PACCT",
+            "SYS_PTRACE",
+            "SYS_RAWIO",
+            "SYS_RESOURCE",
+            "SYS_TIME",
+            "SYS_TTY_CONFIG",
+            "WAKE_ALARM"
+          ]
+        },
+        "command": {
+          "type": "array[string]",
+          "description": null,
+          "create": true,
+          "update": false,
+          "nullable": true,
+          "readOnCreateOnly": false
+        },
+        "count": {
+          "type": "int",
+          "description": null,
+          "create": true,
+          "update": false,
+          "nullable": true,
+          "readOnCreateOnly": false
+        },
+        "cpuSet": {
+          "type": "string",
+          "description": null,
+          "create": true,
+          "update": false,
+          "nullable": true,
+          "readOnCreateOnly": false
+        },
+        "cpuShares": {
+          "type": "int",
+          "description": null,
+          "create": true,
+          "update": false,
+          "nullable": true,
+          "readOnCreateOnly": false
+        },
+        "createIndex": {
+          "type": "int",
+          "description": null,
+          "create": false,
+          "update": false,
+          "nullable": true,
+          "readOnCreateOnly": false,
+          "maxLength": 255
+        },
+        "created": {
+          "type": "date",
+          "description": null,
+          "create": false,
+          "update": false,
+          "nullable": true,
+          "readOnCreateOnly": false,
+          "maxLength": 255
+        },
+        "data": {
+          "type": "map[json]",
+          "description": null,
+          "create": false,
+          "update": false,
+          "nullable": true,
+          "readOnCreateOnly": false,
+          "maxLength": 16777215
+        },
+        "dataVolumeMounts": {
+          "type": "map[reference[volume]]",
+          "description": null,
+          "create": true,
+          "update": false,
+          "nullable": true,
+          "readOnCreateOnly": false
+        },
+        "dataVolumes": {
+          "type": "array[string]",
+          "description": null,
+          "create": true,
+          "update": false,
+          "nullable": true,
+          "readOnCreateOnly": false
+        },
+        "dataVolumesFrom": {
+          "type": "array[reference[container]]",
+          "description": null,
+          "create": true,
+          "update": false,
+          "nullable": true,
+          "readOnCreateOnly": false
+        },
+        "dataVolumesFromLaunchConfigs": {
+          "type": "array[string]",
+          "description": null,
+          "create": true,
+          "update": false,
+          "nullable": true,
+          "readOnCreateOnly": false
+        },
+        "deploymentUnitUuid": {
+          "type": "string",
+          "description": null,
+          "create": false,
+          "update": false,
+          "nullable": true,
+          "readOnCreateOnly": false,
+          "maxLength": 128
+        },
+        "description": {
+          "type": "string",
+          "description": null,
+          "create": true,
+          "update": true,
+          "nullable": true,
+          "readOnCreateOnly": false,
+          "maxLength": 1024
+        },
+        "devices": {
+          "type": "array[string]",
+          "description": null,
+          "create": true,
+          "update": false,
+          "nullable": true,
+          "readOnCreateOnly": false
+        },
+        "disks": {
+          "type": "array[virtualMachineDisk]",
+          "description": null,
+          "create": true,
+          "update": false,
+          "nullable": true,
+          "readOnCreateOnly": false
+        },
+        "dns": {
+          "type": "array[string]",
+          "description": null,
+          "create": true,
+          "update": false,
+          "nullable": true,
+          "readOnCreateOnly": false
+        },
+        "dnsSearch": {
+          "type": "array[string]",
+          "description": null,
+          "create": true,
+          "update": false,
+          "nullable": true,
+          "readOnCreateOnly": false
+        },
+        "domainName": {
+          "type": "string",
+          "description": null,
+          "create": true,
+          "update": false,
+          "nullable": true,
+          "readOnCreateOnly": false
+        },
+        "entryPoint": {
+          "type": "array[string]",
+          "description": null,
+          "create": true,
+          "update": false,
+          "nullable": true,
+          "readOnCreateOnly": false
+        },
+        "environment": {
+          "type": "map[string]",
+          "description": null,
+          "create": true,
+          "update": false,
+          "readOnCreateOnly": false
+        },
+        "expose": {
+          "type": "array[string]",
+          "description": null,
+          "create": true,
+          "update": false,
+          "nullable": true,
+          "readOnCreateOnly": false
+        },
+        "externalId": {
+          "type": "string",
+          "description": null,
+          "create": false,
+          "update": false,
+          "nullable": true,
+          "readOnCreateOnly": false,
+          "maxLength": 128
+        },
+        "extraHosts": {
+          "type": "array[string]",
+          "description": null,
+          "create": true,
+          "update": false,
+          "nullable": true,
+          "readOnCreateOnly": false
+        },
+        "firstRunning": {
+          "type": "date",
+          "description": null,
+          "create": false,
+          "update": false,
+          "nullable": true,
+          "readOnCreateOnly": false,
+          "maxLength": 255
+        },
+        "healthCheck": {
+          "type": "instanceHealthCheck",
+          "description": null,
+          "create": true,
+          "update": false,
+          "nullable": true,
+          "readOnCreateOnly": false
+        },
+        "healthState": {
+          "type": "enum",
+          "description": null,
+          "create": false,
+          "update": false,
+          "nullable": true,
+          "readOnCreateOnly": false,
+          "maxLength": 128,
+          "options": [
+            "healthy",
+            "unhealthy",
+            "updating-healthy",
+            "updating-unhealthy",
+            "initializing"
+          ]
+        },
+        "hostname": {
+          "type": "string",
+          "description": null,
+          "create": true,
+          "update": false,
+          "nullable": true,
+          "readOnCreateOnly": false,
+          "minLength": 1,
+          "maxLength": 255
+        },
+        "id": {
+          "type": "int",
+          "description": null,
+          "create": false,
+          "update": false,
+          "nullable": true,
+          "readOnCreateOnly": false
+        },
+        "imageUuid": {
+          "type": "string",
+          "description": null,
+          "create": true,
+          "update": false,
+          "nullable": true,
+          "readOnCreateOnly": false
+        },
+        "instanceLinks": {
+          "type": "map[reference[instance]]",
+          "description": null,
+          "create": true,
+          "update": false,
+          "nullable": true,
+          "readOnCreateOnly": false
+        },
+        "kind": {
+          "type": "enum",
+          "description": null,
+          "create": true,
+          "update": false,
+          "nullable": true,
+          "readOnCreateOnly": false,
+          "maxLength": 255,
+          "options": [
+            "container",
+            "virtualMachine"
+          ],
+          "default": "container"
+        },
+        "labels": {
+          "type": "map[string]",
+          "description": null,
+          "create": true,
+          "update": false,
+          "readOnCreateOnly": false
+        },
+        "logConfig": {
+          "type": "logConfig",
+          "description": null,
+          "create": true,
+          "update": false,
+          "nullable": true,
+          "readOnCreateOnly": false
+        },
+        "lxcConf": {
+          "type": "map[string]",
+          "description": null,
+          "create": true,
+          "update": false,
+          "nullable": true,
+          "readOnCreateOnly": false
+        },
+        "memory": {
+          "type": "int",
+          "description": null,
+          "create": true,
+          "update": false,
+          "nullable": true,
+          "readOnCreateOnly": false
+        },
+        "memoryMb": {
+          "type": "int",
+          "description": null,
+          "create": true,
+          "update": false,
+          "nullable": true,
+          "readOnCreateOnly": false,
+          "maxLength": 255
+        },
+        "memorySwap": {
+          "type": "int",
+          "description": null,
+          "create": true,
+          "update": false,
+          "nullable": true,
+          "readOnCreateOnly": false
+        },
+        "name": {
+          "type": "string",
+          "description": null,
+          "create": true,
+          "update": false,
+          "nullable": true,
+          "required": true,
+          "readOnCreateOnly": false,
+          "maxLength": 255
+        },
+        "nativeContainer": {
+          "type": "boolean",
+          "description": null,
+          "create": false,
+          "update": false,
+          "readOnCreateOnly": false,
+          "maxLength": 255
+        },
+        "networkContainerId": {
+          "type": "reference[container]",
+          "description": null,
+          "create": true,
+          "update": false,
+          "nullable": true,
+          "readOnCreateOnly": false,
+          "maxLength": 255
+        },
+        "networkIds": {
+          "type": "array[reference[network]]",
+          "description": null,
+          "create": true,
+          "update": false,
+          "nullable": true,
+          "readOnCreateOnly": false
+        },
+        "networkLaunchConfig": {
+          "type": "string",
+          "description": null,
+          "create": true,
+          "update": false,
+          "nullable": true,
+          "readOnCreateOnly": false
+        },
+        "networkMode": {
+          "type": "enum",
+          "description": null,
+          "create": true,
+          "update": false,
+          "nullable": true,
+          "readOnCreateOnly": false,
+          "options": [
+            "none",
+            "bridge",
+            "host",
+            "managed",
+            "container"
+          ],
+          "default": "managed"
+        },
+        "pidMode": {
+          "type": "enum",
+          "description": null,
+          "create": true,
+          "update": false,
+          "nullable": true,
+          "readOnCreateOnly": false,
+          "options": [
+            "host"
+          ]
+        },
+        "ports": {
+          "type": "array[string]",
+          "description": null,
+          "create": true,
+          "update": false,
+          "nullable": true,
+          "readOnCreateOnly": false
+        },
+        "primaryIpAddress": {
+          "type": "string",
+          "description": null,
+          "create": false,
+          "update": false,
+          "readOnCreateOnly": false
+        },
+        "privileged": {
+          "type": "boolean",
+          "description": null,
+          "create": true,
+          "update": false,
+          "readOnCreateOnly": false,
+          "default": false
+        },
+        "publishAllPorts": {
+          "type": "boolean",
+          "description": null,
+          "create": true,
+          "update": false,
+          "readOnCreateOnly": false,
+          "default": false
+        },
+        "readOnly": {
+          "type": "boolean",
+          "description": null,
+          "create": true,
+          "update": false,
+          "readOnCreateOnly": false,
+          "default": false
+        },
+        "registryCredentialId": {
+          "type": "reference[registryCredential]",
+          "description": null,
+          "create": true,
+          "update": false,
+          "nullable": true,
+          "readOnCreateOnly": false,
+          "maxLength": 255
+        },
+        "removeTime": {
+          "type": "date",
+          "description": null,
+          "create": false,
+          "update": false,
+          "nullable": true,
+          "readOnCreateOnly": false,
+          "maxLength": 255
+        },
+        "removed": {
+          "type": "date",
+          "description": null,
+          "create": false,
+          "update": false,
+          "nullable": true,
+          "readOnCreateOnly": false,
+          "maxLength": 255
+        },
+        "requestedHostId": {
+          "type": "reference[host]",
+          "description": null,
+          "create": true,
+          "update": false,
+          "nullable": true,
+          "readOnCreateOnly": false
+        },
+        "securityOpt": {
+          "type": "array[string]",
+          "description": null,
+          "create": true,
+          "update": false,
+          "nullable": true,
+          "readOnCreateOnly": false
+        },
+        "startCount": {
+          "type": "int",
+          "description": null,
+          "create": false,
+          "update": false,
+          "nullable": true,
+          "readOnCreateOnly": false,
+          "maxLength": 255
+        },
+        "startOnCreate": {
+          "type": "boolean",
+          "description": null,
+          "create": true,
+          "update": false,
+          "readOnCreateOnly": false,
+          "default": true
+        },
+        "state": {
+          "type": "enum",
+          "description": null,
+          "create": false,
+          "update": false,
+          "readOnCreateOnly": false,
+          "maxLength": 128,
+          "options": [
+            "creating",
+            "migrating",
+            "purged",
+            "purging",
+            "removed",
+            "removing",
+            "requested",
+            "restarting",
+            "restoring",
+            "running",
+            "starting",
+            "stopped",
+            "stopping",
+            "updating-running",
+            "updating-stopped"
+          ]
+        },
+        "stdinOpen": {
+          "type": "boolean",
+          "description": null,
+          "create": true,
+          "update": false,
+          "readOnCreateOnly": false,
+          "default": false
+        },
+        "systemContainer": {
+          "type": "enum",
+          "description": null,
+          "create": false,
+          "update": false,
+          "nullable": true,
+          "readOnCreateOnly": false,
+          "maxLength": 128,
+          "options": [
+            "NetworkAgent",
+            "LoadBalancerAgent"
+          ]
+        },
+        "token": {
+          "type": "string",
+          "description": null,
+          "create": false,
+          "update": false,
+          "nullable": true,
+          "readOnCreateOnly": false,
+          "maxLength": 255
+        },
+        "transitioning": {
+          "type": "enum",
+          "description": null,
+          "create": false,
+          "update": false,
+          "readOnCreateOnly": false,
+          "options": [
+            "yes",
+            "no",
+            "error"
+          ]
+        },
+        "transitioningMessage": {
+          "type": "string",
+          "description": null,
+          "create": false,
+          "update": false,
+          "nullable": true,
+          "readOnCreateOnly": false
+        },
+        "transitioningProgress": {
+          "type": "int",
+          "description": null,
+          "create": false,
+          "update": false,
+          "nullable": true,
+          "readOnCreateOnly": false
+        },
+        "tty": {
+          "type": "boolean",
+          "description": null,
+          "create": true,
+          "update": false,
+          "readOnCreateOnly": false,
+          "default": false
+        },
+        "user": {
+          "type": "string",
+          "description": null,
+          "create": true,
+          "update": false,
+          "nullable": true,
+          "readOnCreateOnly": false,
+          "minLength": 1
+        },
+        "userdata": {
+          "type": "string",
+          "description": null,
+          "create": true,
+          "update": false,
+          "nullable": true,
+          "readOnCreateOnly": false,
+          "maxLength": 65535
+        },
+        "uuid": {
+          "type": "string",
+          "description": null,
+          "create": false,
+          "update": false,
+          "nullable": true,
+          "readOnCreateOnly": false,
+          "maxLength": 128
+        },
+        "vcpu": {
+          "type": "int",
+          "description": null,
+          "create": true,
+          "update": false,
+          "nullable": true,
+          "readOnCreateOnly": false,
+          "default": 1
+        },
+        "version": {
+          "type": "string",
+          "description": null,
+          "create": false,
+          "update": false,
+          "readOnCreateOnly": false,
+          "maxLength": 255,
+          "default": "0"
+        },
+        "volumeDriver": {
+          "type": "string",
+          "description": null,
+          "create": true,
+          "update": false,
+          "nullable": true,
+          "readOnCreateOnly": false
+        },
+        "workingDir": {
+          "type": "string",
+          "description": null,
+          "create": true,
+          "update": false,
+          "nullable": true,
+          "readOnCreateOnly": false,
+          "minLength": 1
+        },
+        "terminationMessagePath": {
+          "type": "string",
+          "description": null,
+          "create": true,
+          "update": false,
+          "readOnCreateOnly": false
+        },
+        "livenessProbe": {
+          "type": "kubernetesProbe",
+          "description": null,
+          "create": true,
+          "update": false,
+          "readOnCreateOnly": false
+        },
+        "readinessProbe": {
+          "type": "kubernetesProbe",
+          "description": null,
+          "create": true,
+          "update": false,
+          "readOnCreateOnly": false
+        },
+        "resources": {
+          "type": "kubernetesResourceRequirement",
+          "description": null,
+          "create": true,
+          "update": false,
+          "readOnCreateOnly": false
+        },
+        "lifecycle": {
+          "type": "kubernetesLifecycle",
+          "description": null,
+          "create": true,
+          "update": false,
+          "readOnCreateOnly": false
+        },
+        "runAsUser": {
+          "type": "int",
+          "description": null,
+          "create": true,
+          "update": false,
+          "readOnCreateOnly": false
+        },
+        "runAsNonRoot": {
+          "type": "boolean",
+          "description": null,
+          "create": true,
+          "update": false,
+          "readOnCreateOnly": false
+        }
+      },
+      "collectionFilters": {
+        "accountId": {
+          "modifiers": [
+            "eq",
+            "ne",
+            "null",
+            "notnull"
+          ]
+        },
+        "agentId": {
+          "modifiers": [
+            "eq",
+            "ne",
+            "null",
+            "notnull"
+          ]
+        },
+        "allocationState": {
+          "modifiers": [
+            "eq",
+            "ne",
+            "prefix",
+            "like",
+            "notlike",
+            "null",
+            "notnull"
+          ]
+        },
+        "compute": {
+          "modifiers": [
+            "eq",
+            "ne",
+            "lt",
+            "lte",
+            "gt",
+            "gte",
+            "null",
+            "notnull"
+          ]
+        },
+        "createIndex": {
+          "modifiers": [
+            "eq",
+            "ne",
+            "lt",
+            "lte",
+            "gt",
+            "gte",
+            "null",
+            "notnull"
+          ]
+        },
+        "created": {
+          "modifiers": [
+            "eq",
+            "ne",
+            "lt",
+            "lte",
+            "gt",
+            "gte",
+            "null",
+            "notnull"
+          ]
+        },
+        "deploymentUnitUuid": {
+          "modifiers": [
+            "eq",
+            "ne",
+            "prefix",
+            "like",
+            "notlike",
+            "null",
+            "notnull"
+          ]
+        },
+        "description": {
+          "modifiers": [
+            "eq",
+            "ne",
+            "prefix",
+            "like",
+            "notlike",
+            "null",
+            "notnull"
+          ]
+        },
+        "domain": {
+          "modifiers": [
+            "eq",
+            "ne",
+            "prefix",
+            "like",
+            "notlike",
+            "null",
+            "notnull"
+          ]
+        },
+        "externalId": {
+          "modifiers": [
+            "eq",
+            "ne",
+            "prefix",
+            "like",
+            "notlike",
+            "null",
+            "notnull"
+          ]
+        },
+        "firstRunning": {
+          "modifiers": [
+            "eq",
+            "ne",
+            "lt",
+            "lte",
+            "gt",
+            "gte",
+            "null",
+            "notnull"
+          ]
+        },
+        "healthState": {
+          "modifiers": [
+            "eq",
+            "ne",
+            "prefix",
+            "like",
+            "notlike",
+            "null",
+            "notnull"
+          ]
+        },
+        "healthUpdated": {
+          "modifiers": [
+            "eq",
+            "ne",
+            "lt",
+            "lte",
+            "gt",
+            "gte",
+            "null",
+            "notnull"
+          ]
+        },
+        "hostname": {
+          "modifiers": [
+            "eq",
+            "ne",
+            "prefix",
+            "like",
+            "notlike",
+            "null",
+            "notnull"
+          ]
+        },
+        "id": {
+          "modifiers": [
+            "eq",
+            "ne",
+            "lt",
+            "lte",
+            "gt",
+            "gte",
+            "null",
+            "notnull"
+          ]
+        },
+        "imageId": {
+          "modifiers": [
+            "eq",
+            "ne",
+            "null",
+            "notnull"
+          ]
+        },
+        "instanceTriggeredStop": {
+          "modifiers": [
+            "eq",
+            "ne",
+            "prefix",
+            "like",
+            "notlike",
+            "null",
+            "notnull"
+          ]
+        },
+        "kind": {
+          "modifiers": [
+            "eq",
+            "ne",
+            "prefix",
+            "like",
+            "notlike",
+            "null",
+            "notnull"
+          ]
+        },
+        "memoryMb": {
+          "modifiers": [
+            "eq",
+            "ne",
+            "lt",
+            "lte",
+            "gt",
+            "gte",
+            "null",
+            "notnull"
+          ]
+        },
+        "name": {
+          "modifiers": [
+            "eq",
+            "ne",
+            "prefix",
+            "like",
+            "notlike",
+            "null",
+            "notnull"
+          ]
+        },
+        "nativeContainer": {
+          "modifiers": [
+            "eq",
+            "ne",
+            "null",
+            "notnull"
+          ]
+        },
+        "networkContainerId": {
+          "modifiers": [
+            "eq",
+            "ne",
+            "null",
+            "notnull"
+          ]
+        },
+        "offeringId": {
+          "modifiers": [
+            "eq",
+            "ne",
+            "null",
+            "notnull"
+          ]
+        },
+        "registryCredentialId": {
+          "modifiers": [
+            "eq",
+            "ne",
+            "null",
+            "notnull"
+          ]
+        },
+        "removeTime": {
+          "modifiers": [
+            "eq",
+            "ne",
+            "lt",
+            "lte",
+            "gt",
+            "gte",
+            "null",
+            "notnull"
+          ]
+        },
+        "removed": {
+          "modifiers": [
+            "eq",
+            "ne",
+            "lt",
+            "lte",
+            "gt",
+            "gte",
+            "null",
+            "notnull"
+          ]
+        },
+        "startCount": {
+          "modifiers": [
+            "eq",
+            "ne",
+            "lt",
+            "lte",
+            "gt",
+            "gte",
+            "null",
+            "notnull"
+          ]
+        },
+        "state": {
+          "modifiers": [
+            "eq",
+            "ne",
+            "null",
+            "notnull"
+          ]
+        },
+        "systemContainer": {
+          "modifiers": [
+            "eq",
+            "ne",
+            "prefix",
+            "like",
+            "notlike",
+            "null",
+            "notnull"
+          ]
+        },
+        "token": {
+          "modifiers": [
+            "eq",
+            "ne",
+            "prefix",
+            "like",
+            "notlike",
+            "null",
+            "notnull"
+          ]
+        },
+        "userdata": {
+          "modifiers": [
+            "eq",
+            "ne",
+            "prefix",
+            "like",
+            "notlike",
+            "null",
+            "notnull"
+          ]
+        },
+        "uuid": {
+          "modifiers": [
+            "eq",
+            "ne",
+            "prefix",
+            "like",
+            "notlike",
+            "null",
+            "notnull"
+          ]
+        },
+        "version": {
+          "modifiers": [
+            "eq",
+            "ne",
+            "prefix",
+            "like",
+            "notlike",
+            "null",
+            "notnull"
+          ]
+        },
+        "zoneId": {
+          "modifiers": [
+            "eq",
+            "ne",
+            "null",
+            "notnull"
+          ]
+        }
+      },
+      "includeableLinks": [
+        "services",
+        "networkcontainer",
+        "instancelinks",
+        "volumes",
+        "targetinstancelinks",
+        "instances",
+        "agent",
+        "registrycredential",
+        "instancelabels",
+        "ports",
+        "mounts",
+        "serviceexposemaps",
+        "serviceevents",
+        "hosts",
+        "account",
+        "credentials",
+        "healthcheckinstancehostmaps"
+      ],
+      "resourceActions": {
+        "update": {
+          "input": null,
+          "output": "instance"
+        },
+        "stop": {
+          "input": "instanceStop",
+          "output": "instance"
+        },
+        "restart": {
+          "input": null,
+          "output": "instance"
+        },
+        "updatereinitializing": {
+          "input": null,
+          "output": "instance"
+        },
+        "remove": {
+          "input": null,
+          "output": "instance"
+        },
+        "updatehealthy": {
+          "input": null,
+          "output": "instance"
+        },
+        "migrate": {
+          "input": null,
+          "output": "instance"
+        },
+        "allocate": {
+          "input": null,
+          "output": "instance"
+        },
+        "create": {
+          "input": null,
+          "output": "instance"
+        },
+        "console": {
+          "input": "instanceConsoleInput",
+          "output": "instanceConsole"
+        },
+        "start": {
+          "input": null,
+          "output": "instance"
+        },
+        "restore": {
+          "input": null,
+          "output": "instance"
+        },
+        "deallocate": {
+          "input": null,
+          "output": "instance"
+        },
+        "updateunhealthy": {
+          "input": null,
+          "output": "instance"
+        },
+        "purge": {
+          "input": null,
+          "output": "instance"
+        },
+        "logs": {
+          "input": "containerLogs",
+          "output": "hostAccess"
+        },
+        "setlabels": {
+          "input": "setLabelsInput",
+          "output": "container"
+        },
+        "execute": {
+          "input": "containerExec",
+          "output": "hostAccess"
+        }
+      },
+      "collectionActions": {},
+      "collectionFields": {},
+      "resourceMethods": [
+        "GET"
+      ],
+      "collectionMethods": [
+        "POST"
+      ]
+    },
+    {
+      "id": "kubernetesProbe",
+      "type": "schema",
+      "links": {
+        "self": "http://localhost:8080/v1/schemas/kubernetesprobe"
+      },
+      "actions": {},
+      "pluralName": "kubernetesProbes",
+      "resourceFields": {
+        "exec": {
+          "type": "kubernetesExecAction",
+          "description": null,
+          "create": true,
+          "update": false,
+          "readOnCreateOnly": false
+        },
+        "httpGet": {
+          "type": "kubernetesHTTPGetAction",
+          "description": null,
+          "create": true,
+          "update": false,
+          "readOnCreateOnly": false
+        },
+        "tcpSocket": {
+          "type": "kubernetesTCPSocketAction",
+          "description": null,
+          "create": true,
+          "update": false,
+          "readOnCreateOnly": false
+        },
+        "initialDelaySeconds": {
+          "type": "int",
+          "description": null,
+          "create": true,
+          "update": false,
+          "readOnCreateOnly": false
+        },
+        "timeoutSeconds": {
+          "type": "int",
+          "description": null,
+          "create": true,
+          "update": false,
+          "readOnCreateOnly": false
+        }
+      },
+      "collectionFilters": {},
+      "includeableLinks": [],
+      "resourceActions": {},
+      "collectionActions": {},
+      "collectionFields": {},
+      "resourceMethods": [
+        "GET"
+      ],
+      "collectionMethods": [
+        "POST"
+      ]
+    },
+    {
+      "id": "kubernetesExecAction",
+      "type": "schema",
+      "links": {
+        "self": "http://localhost:8080/v1/schemas/kubernetesexecaction"
+      },
+      "actions": {},
+      "pluralName": "kubernetesExecActions",
+      "resourceFields": {
+        "command": {
+          "type": "array[string]",
+          "description": null,
+          "create": true,
+          "update": false,
+          "readOnCreateOnly": false
+        }
+      },
+      "collectionFilters": {},
+      "includeableLinks": [],
+      "resourceActions": {},
+      "collectionActions": {},
+      "collectionFields": {},
+      "resourceMethods": [
+        "GET"
+      ],
+      "collectionMethods": [
+        "POST"
+      ]
+    },
+    {
+      "id": "kubernetesHTTPGetAction",
+      "type": "schema",
+      "links": {
+        "self": "http://localhost:8080/v1/schemas/kuberneteshttpgetaction"
+      },
+      "actions": {},
+      "pluralName": "kubernetesHTTPGetActions",
+      "resourceFields": {
+        "path": {
+          "type": "string",
+          "description": null,
+          "create": true,
+          "update": false,
+          "readOnCreateOnly": false
+        },
+        "port": {
+          "type": "string",
+          "description": null,
+          "create": true,
+          "update": false,
+          "readOnCreateOnly": false
+        },
+        "host": {
+          "type": "string",
+          "description": null,
+          "create": true,
+          "update": false,
+          "readOnCreateOnly": false
+        },
+        "scheme": {
+          "type": "string",
+          "description": null,
+          "create": true,
+          "update": false,
+          "readOnCreateOnly": false
+        }
+      },
+      "collectionFilters": {},
+      "includeableLinks": [],
+      "resourceActions": {},
+      "collectionActions": {},
+      "collectionFields": {},
+      "resourceMethods": [
+        "GET"
+      ],
+      "collectionMethods": [
+        "POST"
+      ]
+    },
+    {
+      "id": "kubernetesTCPSocketAction",
+      "type": "schema",
+      "links": {
+        "self": "http://localhost:8080/v1/schemas/kubernetestcpsocketaction"
+      },
+      "actions": {},
+      "pluralName": "kubernetesTCPSocketActions",
+      "resourceFields": {
+        "port": {
+          "type": "string",
+          "description": null,
+          "create": true,
+          "update": false,
+          "readOnCreateOnly": false
+        }
+      },
+      "collectionFilters": {},
+      "includeableLinks": [],
+      "resourceActions": {},
+      "collectionActions": {},
+      "collectionFields": {},
+      "resourceMethods": [
+        "GET"
+      ],
+      "collectionMethods": [
+        "POST"
+      ]
+    },
+    {
+      "id": "kubernetesResourceRequirement",
+      "type": "schema",
+      "links": {
+        "self": "http://localhost:8080/v1/schemas/kubernetesresourcerequirement"
+      },
+      "actions": {},
+      "pluralName": "kubernetesResourceRequirements",
+      "resourceFields": {
+        "limits": {
+          "type": "map[json]",
+          "description": null,
+          "create": true,
+          "update": false,
+          "readOnCreateOnly": false
+        },
+        "requests": {
+          "type": "map[json]",
+          "description": null,
+          "create": true,
+          "update": false,
+          "readOnCreateOnly": false
+        }
+      },
+      "collectionFilters": {},
+      "includeableLinks": [],
+      "resourceActions": {},
+      "collectionActions": {},
+      "collectionFields": {},
+      "resourceMethods": [
+        "GET"
+      ],
+      "collectionMethods": [
+        "POST"
+      ]
+    },
+    {
+      "id": "kubernetesHandler",
+      "type": "schema",
+      "links": {
+        "self": "http://localhost:8080/v1/schemas/kuberneteshandler"
+      },
+      "actions": {},
+      "pluralName": "kubernetesHandlers",
+      "resourceFields": {
+        "exec": {
+          "type": "kubernetesExecAction",
+          "description": null,
+          "create": true,
+          "update": false,
+          "readOnCreateOnly": false
+        },
+        "httpGet": {
+          "type": "kubernetesHTTPGetAction",
+          "description": null,
+          "create": true,
+          "update": false,
+          "readOnCreateOnly": false
+        },
+        "tcpSocket": {
+          "type": "kubernetesTCPSocketAction",
+          "description": null,
+          "create": true,
+          "update": false,
+          "readOnCreateOnly": false
+        }
+      },
+      "collectionFilters": {},
+      "includeableLinks": [],
+      "resourceActions": {},
+      "collectionActions": {},
+      "collectionFields": {},
+      "resourceMethods": [
+        "GET"
+      ],
+      "collectionMethods": [
+        "POST"
+      ]
+    },
+    {
+      "id": "kubernetesLifecycle",
+      "type": "schema",
+      "links": {
+        "self": "http://localhost:8080/v1/schemas/kuberneteslifecycle"
+      },
+      "actions": {},
+      "pluralName": "kubernetesLifecycles",
+      "resourceFields": {
+        "postStart": {
+          "type": "kubernetesHandler",
+          "description": null,
+          "create": true,
+          "update": false,
+          "readOnCreateOnly": false
+        },
+        "preStart": {
+          "type": "kubernetesHandler",
+          "description": null,
+          "create": true,
+          "update": false,
+          "readOnCreateOnly": false
+        }
+      },
+      "collectionFilters": {},
+      "includeableLinks": [],
+      "resourceActions": {},
+      "collectionActions": {},
+      "collectionFields": {},
+      "resourceMethods": [
+        "GET"
+      ],
+      "collectionMethods": [
+        "POST"
+      ]
+    },
+    {
       "id": "account",
       "type": "schema",
       "links": {

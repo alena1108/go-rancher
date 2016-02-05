@@ -62,6 +62,15 @@ type RancherClient struct {
 	LoadBalancerConfig                       LoadBalancerConfigOperations
 	MachineDriverUpdateInput                 MachineDriverUpdateInputOperations
 	MachineDriverErrorInput                  MachineDriverErrorInputOperations
+	KubernetesServicePort                    KubernetesServicePortOperations
+	KubernetesLaunchConfig                   KubernetesLaunchConfigOperations
+	KubernetesProbe                          KubernetesProbeOperations
+	KubernetesExecAction                     KubernetesExecActionOperations
+	KubernetesHTTPGetAction                  KubernetesHTTPGetActionOperations
+	KubernetesTCPSocketAction                KubernetesTCPSocketActionOperations
+	KubernetesResourceRequirement            KubernetesResourceRequirementOperations
+	KubernetesHandler                        KubernetesHandlerOperations
+	KubernetesLifecycle                      KubernetesLifecycleOperations
 	Account                                  AccountOperations
 	Agent                                    AgentOperations
 	AuditLog                                 AuditLogOperations
@@ -194,6 +203,15 @@ func constructClient() *RancherClient {
 	client.LoadBalancerConfig = newLoadBalancerConfigClient(client)
 	client.MachineDriverUpdateInput = newMachineDriverUpdateInputClient(client)
 	client.MachineDriverErrorInput = newMachineDriverErrorInputClient(client)
+	client.KubernetesServicePort = newKubernetesServicePortClient(client)
+	client.KubernetesLaunchConfig = newKubernetesLaunchConfigClient(client)
+	client.KubernetesProbe = newKubernetesProbeClient(client)
+	client.KubernetesExecAction = newKubernetesExecActionClient(client)
+	client.KubernetesHTTPGetAction = newKubernetesHTTPGetActionClient(client)
+	client.KubernetesTCPSocketAction = newKubernetesTCPSocketActionClient(client)
+	client.KubernetesResourceRequirement = newKubernetesResourceRequirementClient(client)
+	client.KubernetesHandler = newKubernetesHandlerClient(client)
+	client.KubernetesLifecycle = newKubernetesLifecycleClient(client)
 	client.Account = newAccountClient(client)
 	client.Agent = newAgentClient(client)
 	client.AuditLog = newAuditLogClient(client)
